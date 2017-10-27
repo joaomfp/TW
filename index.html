@@ -22,24 +22,33 @@
 		</div>
 	</div>
 	
-	<div id="painel_2">
+	
+	<div id="painel_login">
 			Username: <input type="text"><br>
   			Password: <input type="password"><br>
   			<button id="login_2" onclick=login_wData()>Login</button>	
 	</div>
 	
 	<div class="menu">
+			<button  id="home"  onclick=home()></button>
 			<button  id="jogar" ></button>
 			<button  id="configuracoes" onclick=config()></button>
 			<button  id="instrucoes" onclick=instrucoes()></button>
-			<button  id="classficacoes" onclick=buttons()></button>
+			<button  id="classficacoes" onclick=rank()></button>
 	</div>	
+	<div id="painel_init">
+		<span>Bem vindo ao Jogo do Nim.</span>
+	</div>
+	<div id="painel_instrucoes">
+		<p>Falta editar isto no css</p>
+	</div>
 	
-	<div id="painel_3">
-	<div id="quem_joga">
-			Modo de jogo:  <button id="selecionar_jogador" onclick=quem_joga()>Offline</button>
+	<div id="painel_jogo">
+	
+	<div id="modo_jogo">
+			Modo de jogo:  <button id="selecionar_jogador" onclick=modo_jogo()>Offline</button>
 						   <button id="selecionar_jogador" >Online</button>
-		</div>
+	</div>
 
 		<div id="demo">
 			Primeiro a jogar: <button id="selecionar_jogador" onclick=first_play_pc()>Pc</button>
@@ -47,6 +56,7 @@
 		</div>
 		<div id="demo_2">
 			Dificuldade: <button id="selecionar_jogador" onclick=dif_play()>Dificil</button>
+						 <button id="selecionar_jogador" onclick=dif_play()>Intermédio</button>
 						 <button id="selecionar_jogador" onclick=dif_play()>Fácil</button>
 		</div>
 		 <div id="demo_3">
@@ -60,12 +70,25 @@
 				<div id="tabuleiro">
 					<table id="tableclass" class=""></table>
 				</div>
+				
 		</div>
-			
-</div>
+		
+		
+		<div id="try_again">
+					<button id="dim_tab" onclick=try_again()>Tentar outra vez</button>
+		</div>
+		</div>
+		<div id="painel_rank">
+			<div id="box">
+				1<br>
+				2<br>
+			</div>
+				
+		</div>
+
 	
 	<div id="bot">
-	<span>Website elaborado por : João Rodrigues & João Pereira</span>
+	<span>2018, João Rodrigues & João Pereira</span>
 	</div>
     
 
