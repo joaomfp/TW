@@ -12,51 +12,63 @@
 </head>
 
 <body class="background">
-
-	<h1 class="h1"> Jogo do Nim </h1>
-	<div class="login">
-		<!-- Button to open the modal login form -->
-		<button onclick="document.getElementById('id01').style.display='block'">Login</button>
-
-		<!-- The Modal -->
-		<div id="id01" class="modal">
-  		<span onclick="document.getElementById('id01').style.display='none'" 
-		class="close" title="Close Modal">&times;
-		</span>
-
-	  <!-- Modal Content -->
-	  <form class="modal-content animate" action="/action_page.php">
-	    <div class="imgcontainer">
-	      <img src="login.png" alt="Avatar" class="avatar">
-	    </div>
-	
-	    <div class="container">
-	      <label><b>Username</b></label>
-	      <input type="text" placeholder="Enter Username" name="uname" required>
-	
-	      <label><b>Password</b></label>
-	      <input type="password" placeholder="Enter Password" name="psw" required>
-	
-	      <button type="submit">Login</button>
-	      <input type="checkbox" checked="checked"> Remember me
-	    </div>
-	
-	    <div class="container" style="background-color:#f1f1f1">
-	      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-	      <span class="psw">Forgot <a href="#">password?</a></span>
-	    </div>
-	  </form>
+	<div id="header">
+		<div class="header_painel1" class="app_name">
+			<span class="title">JOGO DO NIM</span>
+		</div>
+		<div class="header_painel2" class="app_btns"> 
+			<button class="app_btn" id="login" onclick=login()>Login</button>
+			<button class="app_btn" id="registo" onclick=registar()>Registar</button>
+		</div>
 	</div>
+	
+	<div id="painel_2">
+			Username: <input type="text"><br>
+  			Password: <input type="password"><br>
+  			<button id="login_2" onclick=login_wData()>Login</button>	
 	</div>
-	<div id="tabuleiro">
+	
+	<div class="menu">
+			<button  id="jogar" ></button>
+			<button  id="configuracoes" onclick=config()></button>
+			<button  id="instrucoes" onclick=instrucoes()></button>
+			<button  id="classficacoes" onclick=buttons()></button>
+	</div>	
+	
+	<div id="painel_3">
+	<div id="quem_joga">
+			Modo de jogo:  <button id="selecionar_jogador" onclick=quem_joga()>Offline</button>
+						   <button id="selecionar_jogador" >Online</button>
+		</div>
 
+		<div id="demo">
+			Primeiro a jogar: <button id="selecionar_jogador" onclick=first_play_pc()>Pc</button>
+							  <button id="selecionar_jogador" onclick=first_play()>Utilizador</button>
+		</div>
+		<div id="demo_2">
+			Dificuldade: <button id="selecionar_jogador" onclick=dif_play()>Dificil</button>
+						 <button id="selecionar_jogador" onclick=dif_play()>Fácil</button>
+		</div>
+		 <div id="demo_3">
+			<br>Tamanho do tabuleiro: <input id="numb" >
+			<button id="dim_tab" onclick=myFunction()>Submit</button>
+			
+		</div>
+		<div id="gerar_tab">
+				<!-- <button id="dim_tab2" onclick=gerar_tab()>Gerar</button>-->
+			
+				<div id="tabuleiro">
+					<table id="tableclass" class=""></table>
+				</div>
+		</div>
+			
+</div>
+	
+	<div id="bot">
+	<span>Website elaborado por : João Rodrigues & João Pereira</span>
 	</div>
-
     
 
 </body>
-    
-<footer class="footer">
-    By: Jony jony SA.
-    </footer>
+
 </html>
