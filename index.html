@@ -18,15 +18,8 @@
 		</div>
 		<div class="header_painel2" class="app_btns"> 
 			<button class="app_btn" id="login" onclick=login()>Login</button>
-			<button class="app_btn" id="registo" onclick=registar()>Registar</button>
+			<button class="app_btn" id="registo" onclick=login()>Registar</button>
 		</div>
-	</div>
-	
-	
-	<div id="painel_login">
-			Username: <input type="text"><br>
-  			Password: <input type="password"><br>
-  			<button id="login_2" onclick=login_wData()>Login</button>	
 	</div>
 	
 	<div class="menu">
@@ -36,18 +29,31 @@
 			<button  id="instrucoes" onclick=instrucoes()></button>
 			<button  id="classficacoes" onclick=rank()></button>
 	</div>	
+	
+		
+	<div id="painel_login">
+			<div id="box_login">
+			Username: <input type="text"><br>
+  			Password: <input type="password"><br>
+  			<button id="login_2" onclick=login_wData()>Login</button>	
+  			</div>
+	</div>
+	
 	<div id="painel_init">
-		<span>Bem vindo ao Jogo do Nim.</span>
+		<div id="box_init">
+		<span class="init">Bem vindo ao Jogo do Nim.</span><br>
+					<button class="app_btn" id="joga" onclick=config()>Jogar</button>
+		
+		</div>
 	</div>
 	<div id="painel_instrucoes">
 		<p>Falta editar isto no css</p>
 	</div>
 	
 	<div id="painel_jogo">
-	
-	<div id="modo_jogo">
+		<div id="modo_jogo">
 			Modo de jogo:  <button id="selecionar_jogador" onclick=modo_jogo()>Offline</button>
-						   <button id="selecionar_jogador" >Online</button>
+						   <button id="selecionar_jogador" onclick=modo_jogo()>Online</button>
 	</div>
 
 		<div id="demo">
@@ -61,14 +67,14 @@
 		</div>
 		 <div id="demo_3">
 			<br>Tamanho do tabuleiro: <input id="numb" >
-			<button id="dim_tab" onclick=myFunction()>Submit</button>
+			<button id="dim_tab" onclick=myFunction()>Play</button>
 			
 		</div>
 		<div id="gerar_tab">
 				<!-- <button id="dim_tab2" onclick=gerar_tab()>Gerar</button>-->
 			
 				<div id="tabuleiro">
-					<table id="tableclass" class=""></table>
+					<table id="tableclass" ></table>
 				</div>
 				
 		</div>
@@ -79,16 +85,13 @@
 		</div>
 		</div>
 		<div id="painel_rank">
-			<div id="box">
-				1<br>
-				2<br>
-			</div>
-				
+			<table id="tabelaclassificacao">
+			</table>	
 		</div>
 
 	
 	<div id="bot">
-	<span>2018, João Rodrigues & João Pereira</span>
+	<span>2017, João Rodrigues & João Pereira</span>
 	</div>
     
 
