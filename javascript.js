@@ -27,21 +27,29 @@ function gerar_tab() {
 function gerar_tab2() {
 	var table = document.getElementById('tabelaclassificacao');
 
-	for (var i = 0; i < 10; i++) {
+	for (var i = 0; i < 11 ;i++) {
 		var row = table.insertRow();
 		row.classList.add('tr_1');
 
-		for (var j = 0; j < 2; j++) {
+		for (var j = 0; j < 2 ;j++) {
 			var td = row.insertCell();
 			td.classList.add('td_1');
 
 		}
 	}
-	for ( i = 0; i < 10; i++) {
-		var player_class = i + 1 + 'º --------------';
+	var n = "Nome";
+	var t = "Tempo";
+	document.getElementById("tabelaclassificacao").rows[0].cells[0].innerHTML = n;
+	document.getElementById("tabelaclassificacao").rows[0].cells[1].innerHTML = t;
+
+
+	for ( i = 1; i <= 10 ;i++) {
+		var player_class = i  + 'º		--------------		';
+		var player_time = "-- / -- / --";
 		console.log(player_class);
-			document.getElementById("tabelaclassificacao").rows[i].cells[1].innerHTML = player_class;
-		
+			document.getElementById("tabelaclassificacao").rows[i].cells[0].innerHTML = player_class;
+			document.getElementById("tabelaclassificacao").rows[i].cells[1].innerHTML = player_time;
+
 	}
 
 }
@@ -209,10 +217,17 @@ function registar() {
 }
 
 function login() {
+	document.getElementById('painel_rank').style.display = 'none';
+	document.getElementById('painel_instrucoes').style.display = 'none';
+	document.getElementById('gerar_tab').style.display = 'none';
+	document.getElementById('painel_jogo').style.display = 'none';
+	document.getElementById('tabuleiro').style.display = 'none';
+	document.getElementById('painel_init').style.display = 'none';
 	document.getElementById('painel_login').style.display = 'block';
 }
 function login_wData() {
 	document.getElementById('painel_login').style.display = 'none';
+	document.getElementById('painel_init').style.display = 'block';
 }
 function config() {
 	document.getElementById('painel_login').style.display = 'none';
@@ -262,6 +277,7 @@ function home() {
 	document.getElementById('painel_login').style.display = 'none';
 	document.getElementById('painel_rank').style.display = 'none';
 	document.getElementById('painel_init').style.display = 'block';
+	//document.getElementById('demo').style.display = 'block';
 	
 }
 function table_click() {
