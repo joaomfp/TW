@@ -23,11 +23,11 @@
 	</div>
 	
 	<div class="menu">
-			<button  id="home"  onclick=home()></button>
-			<button  id="jogar" ></button>
+			<button  id="home" onclick=home()></button>
 			<button  id="configuracoes" onclick=config()></button>
 			<button  id="instrucoes" onclick=instrucoes()></button>
 			<button  id="classficacoes" onclick=rank()></button>
+			<button  id="quit" onclick=quitbutton()></button>
 	</div>	
 	
 		
@@ -66,7 +66,7 @@
 						 <button id="selecionar_jogador" onclick=dif_play()>Fácil</button>
 		</div>
 		 <div id="demo_3">
-			<br>Tamanho do tabuleiro: <input id="numb" >
+			<br>Tamanho do tabuleiro: <input type="number" id="numb" >
 			<button id="dim_tab" onclick=myFunction()>Play</button>
 			
 		</div>
@@ -81,7 +81,7 @@
 		
 		
 		<div id="try_again">
-					<button id="dim_tab" onclick=try_again()>Tentar outra vez</button>
+				<button id="dim_tab" onclick=try_again()>Tentar outra vez</button>
 		</div>
 		</div>
 		<div id="painel_rank">
@@ -89,12 +89,16 @@
 			</table>	
 		</div>
 
-	
+		<div id="quitgame">
+				Tem a certeza que quer desistir? 
+				<button id="selecionar_jogador" onclick=yes()>Sim</button>
+				<button id="selecionar_jogador" onclick=quitfunction()>Não</button>
+	</div>
 	<div id="bot">
 	<span>2017, João Rodrigues & João Pereira</span>
 	</div>
-    
 
+	
 </body>
 
 </html>

@@ -4,6 +4,7 @@ var nim = 0;
 
 function gerar_tab() {
 	document.getElementById('tabuleiro').style.display = 'block';
+	document.getElementById('quit').style.display = 'block';
 
 	nim = tam * tam;
 	var table = document.getElementById('tableclass');
@@ -224,6 +225,7 @@ function config() {
 
 }
 function modo_jogo() {
+	document.getElementById('gerar_tab').style.display = 'none';
 	document.getElementById('modo_jogo').style.display = 'none';
 	document.getElementById('demo').style.display = 'block';
 }
@@ -251,13 +253,16 @@ function rank() {
 }
 
 function home() {
+	clearBoard();
+	document.getElementById('tabuleiro').style.display = 'none';
+	document.getElementById('quitgame').style.display = 'none';
 	document.getElementById('gerar_tab').style.display = 'none';
 	document.getElementById('painel_jogo').style.display = 'none';
 	document.getElementById('painel_instrucoes').style.display = 'none';
 	document.getElementById('painel_login').style.display = 'none';
 	document.getElementById('painel_rank').style.display = 'none';
 	document.getElementById('painel_init').style.display = 'block';
-
+	
 }
 function table_click() {
 	var boardElement = document.getElementById("tabuleiro");
@@ -268,7 +273,29 @@ function try_again() {
 	clearBoard();
 	document.getElementById('try_again').style.display = 'none';
 	document.getElementById('demo').style.display = 'block';
+}
 
-	// myFunction();
+function quitbutton(){
+	document.getElementById('quit').style.display = 'none';
+	document.getElementById('painel_jogo').style.display = 'none';
+	document.getElementById('gerar_tab').style.display = 'none';
+	document.getElementById('tabuleiro').style.display = 'none';
+	document.getElementById('quitgame').style.display = 'block';
+}
+function yes(){
+clearBoard();
+	document.getElementById('tabuleiro').style.display = 'none';
+	document.getElementById('quitgame').style.display = 'none';
+	document.getElementById('painel_jogo').style.display = 'none';
+	document.getElementById('painel_init').style.display = 'block';
+	document.getElementById('demo').style.display = 'block';
+
+	}
+function quitfunction(){
+	document.getElementById('quitgame').style.display = 'none';
+	document.getElementById('quit').style.display = 'block';
+	document.getElementById('painel_jogo').style.display = 'block';
+	document.getElementById('tabuleiro').style.display = 'block';
+	document.getElementById('gerar_tab').style.display = 'block';
 
 }
