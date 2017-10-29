@@ -137,13 +137,6 @@ height: 2px;
 	background-color: rgb(210, 105, 30);
 }
 
-/*
-#center{
-	margin-top: 30px;
-	margin-bottom: 30px;
-	min-height: 500px;
-	width: 100% !important;
-}*/
 #login, #registo, #login_2, #selecionar_jogador{
 	font-family: Courier New;
     color: black;
@@ -407,26 +400,26 @@ height: 2px;
    
 }
 #home {
-	background-image: url('home.png');
+	background-image: url('images/home.png');
 }
 #configuracoes {
-	background-image: url('settings.png');
+	background-image: url('images/settings.png');
 }
 
 #jogar {
-	background-image: url('play.png');
+	background-image: url('images/play.png');
 }
 
 #classficacoes {
-	background-image: url('ranking.png');
+	background-image: url('images/ranking.png');
 }
 
 #instrucoes {
-	background-image: url('rules.png');
+	background-image: url('images/rules.png');
 }
 #play{
-	background-image: url('play.png');
+	background-image: url('images/play.png');
 }
 #quit {
-	background-image: url('quit.png');
+	background-image: url('images/quit.png');
 }

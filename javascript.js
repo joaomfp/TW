@@ -113,7 +113,8 @@ function winner() {
 		document.getElementById('tabuleiro').style.display = 'none';
 		document.getElementById('gerar_tab').style.display = 'none';
 		// document.getElementById('myFunction').style.display = 'none';
-
+		document.getElementById('quit').style.display = 'none';
+		document.getElementById('play').style.display = 'none';
 		document.getElementById('try_again').style.display = 'block';
 
 		return;
@@ -169,8 +170,8 @@ function clearBoard() {
 
 	var i;
 	for (i = 0; i < tam; i++) {
-		if (document.getElementById("tabelaclassificacao").rows.length != 0)
-			document.getElementById("tabelaclassificacao").deleteRow(0);
+		if (document.getElementById("tableclass").rows.length != 0)
+			document.getElementById("tableclass").deleteRow(0);
 	}
 }
 function clearBoard_rank() {
@@ -187,6 +188,7 @@ function myFunction() {
 	var x, text;
 	
 	x = document.getElementById("numb").value;
+	document.getElementById('demo_3').style.display = 'none';
 
 	document.getElementById('gerar_tab').style.display = 'block';
 	tam = x;
@@ -238,9 +240,9 @@ function config() {
 	document.getElementById('painel_rank').style.display = 'none';
 	document.getElementById('painel_init').style.display = 'none';
 	document.getElementById('painel_instrucoes').style.display = 'none';
-	document.getElementById('gerar_tab').style.display = 'block';
+	document.getElementById('gerar_tab').style.display = 'none';
 	document.getElementById('painel_jogo').style.display = 'block';
-	document.getElementById('tabuleiro').style.display = 'block';
+	document.getElementById('tabuleiro').style.display = 'none';
 
 }
 function modo_jogo() {
@@ -291,7 +293,6 @@ function table_click() {
 
 function try_again() {
 	clearBoard();
-
 	document.getElementById('try_again').style.display = 'none';
 	document.getElementById('demo').style.display = 'block';
 }
@@ -313,7 +314,7 @@ function quitbutton(){
 	document.getElementById('quitgame').style.display = 'block';
 }
 function yes(){
-clearBoard();
+	clearBoard();
 	document.getElementById('tabuleiro').style.display = 'none';
 	document.getElementById('quitgame').style.display = 'none';
 	document.getElementById('painel_jogo').style.display = 'none';
@@ -322,7 +323,7 @@ clearBoard();
 
 	}
 function quitfunction(){
-	document.getElementById('play').style.display = 'none';
+	document.getElementById('play').style.display = 'block';
 	document.getElementById('quitgame').style.display = 'none';
 	document.getElementById('quit').style.display = 'block';
 	document.getElementById('painel_jogo').style.display = 'block';
