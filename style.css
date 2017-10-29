@@ -71,11 +71,6 @@ html {
 	background: #bfbfbf;
 }
 
-.menu.but {
-	float: right;
-	width: 300px;
-}
-
 #tabuleiro, #tableclass {
 	margin: auto;
 	width: 450px;
@@ -318,6 +313,7 @@ height: 2px;
 	margin: auto;
 }
 #quitgame{
+	
 	    display: block;
     text-align: center;
     font-size: 35px;
@@ -390,7 +386,7 @@ height: 2px;
      outline:none;
 }
 
-#instrucoes, #configuracoes, #classficacoes, #home {
+#instrucoes, #configuracoes, #classficacoes, #home, #quit, #play  {
 	width: 60px;
 	height: 60px;
 	background: transparent;
@@ -401,20 +397,12 @@ height: 2px;
 	margin-left: 15px;
 }
 
-#quit{
-	width: 60px;
-	height: 60px;
-	background: transparent;
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	background-position: center;
-	border: none;
+#play{
 	margin-left: 50px;
-		
 }
 
 
-#painel_instrucoes,#quit {
+#painel_instrucoes,#quit ,#play {
   display: none;
    
 }
@@ -436,7 +424,9 @@ height: 2px;
 #instrucoes {
 	background-image: url('rules.png');
 }
-
+#play{
+	background-image: url('play.png');
+}
 #quit {
 	background-image: url('quit.png');
 }

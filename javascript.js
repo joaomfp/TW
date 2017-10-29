@@ -4,7 +4,8 @@ var nim = 0;
 
 function gerar_tab() {
 	document.getElementById('tabuleiro').style.display = 'block';
-	document.getElementById('quit').style.display = 'block';
+	document.getElementById('play').style.display = 'inline-block';
+	document.getElementById('quit').style.display = 'inline-block';
 
 	nim = tam * tam;
 	var table = document.getElementById('tableclass');
@@ -168,7 +169,8 @@ function clearBoard() {
 
 	var i;
 	for (i = 0; i < tam; i++) {
-		document.getElementById("tableclass").deleteRow(0);
+		if (document.getElementById("tabelaclassificacao").rows.length != 0)
+			document.getElementById("tabelaclassificacao").deleteRow(0);
 	}
 }
 function clearBoard_rank() {
@@ -183,11 +185,12 @@ function clearBoard_rank() {
 
 function myFunction() {
 	var x, text;
-
+	
 	x = document.getElementById("numb").value;
 
 	document.getElementById('gerar_tab').style.display = 'block';
 	tam = x;
+	clearBoard();
 	gerar_tab();
 }
 
@@ -230,6 +233,7 @@ function login_wData() {
 	document.getElementById('painel_init').style.display = 'block';
 }
 function config() {
+	clearBoard();
 	document.getElementById('painel_login').style.display = 'none';
 	document.getElementById('painel_rank').style.display = 'none';
 	document.getElementById('painel_init').style.display = 'none';
@@ -287,11 +291,21 @@ function table_click() {
 
 function try_again() {
 	clearBoard();
+
 	document.getElementById('try_again').style.display = 'none';
 	document.getElementById('demo').style.display = 'block';
 }
-
+function playbutton(){
+	document.getElementById('painel_login').style.display = 'none';
+	document.getElementById('painel_rank').style.display = 'none';
+	document.getElementById('painel_init').style.display = 'none';
+	document.getElementById('painel_instrucoes').style.display = 'none';
+	document.getElementById('gerar_tab').style.display = 'block';
+	document.getElementById('painel_jogo').style.display = 'block';
+	document.getElementById('tabuleiro').style.display = 'block';
+}
 function quitbutton(){
+	document.getElementById('play').style.display = 'none';
 	document.getElementById('quit').style.display = 'none';
 	document.getElementById('painel_jogo').style.display = 'none';
 	document.getElementById('gerar_tab').style.display = 'none';
@@ -308,6 +322,7 @@ clearBoard();
 
 	}
 function quitfunction(){
+	document.getElementById('play').style.display = 'none';
 	document.getElementById('quitgame').style.display = 'none';
 	document.getElementById('quit').style.display = 'block';
 	document.getElementById('painel_jogo').style.display = 'block';
